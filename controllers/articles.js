@@ -17,15 +17,15 @@ router.get('/new', (req,res) => {
 router.get('/:id', (req,res) => {
 	Article.findById(req.params.id, (err, foundArticles) => {
 		res.render('articles/show.ejs', {
-			article: foundArticle
+			article: foundArticles
 		});
 	});
 });
 
 router.get('/:id/edit', (req,res) => {
-	Article.findById(req.params.id, (err, foundArticle) => {
+	Article.findById(req.params.id, (err, foundArticles) => {
 		res.render('articles/edit.ejs', {
-			article: foundArticle
+			article: foundArticles
 		});
 	});
 });
@@ -48,7 +48,7 @@ router.post('/', (req,res) => {
 router.delete('/:id', (req,res) => {
 	Article.findByIdAndRemove(req.params.id, (err, deletedArticle) => {
 		console.log(deletedArticle, 'this is deletedArticle');
-		res.redirect('/authors')
+		res.redirect('/articles')
 	})
 })
 

@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 const authorsController = require('./controllers/authors.js');
 app.use('/authors', authorsController);
-const articlesController = require('/controllers/articels.js');
+const articlesController = require('./controllers/articles.js');
 app.use('/articles', articlesController);
 
 

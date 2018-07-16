@@ -16,7 +16,7 @@ router.get('/new', (req, res) => {
 });
 
 
-router.get('/:id', (req, res) => {
+router.get('/:id/show', (req, res) => {
   Author.findById(req.params.id, (err, foundAuthor) => {
     res.render('authors/show.ejs', {
       author: foundAuthor
