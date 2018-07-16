@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Atricle = require('../models/articles');
+const Article = require('../models/articles');
 
 router.get('/', (req,res) => {
 	Article.find({}, (err, foundArticles) => {
@@ -11,7 +11,7 @@ router.get('/', (req,res) => {
 });
 
 router.get('/new', (req,res) => {
-	res.render('authors/new.ejs');
+	res.render('articles/new.ejs');
 });
 
 router.get('/:id', (req,res) => {
