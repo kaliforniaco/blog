@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>DavidEpps.GA</title>
+  </head>
+  <body>
+  	<header>
+  		<h1>Articles</h1>
+  		<nav>
+  			<ul>
+  				<li><a href="/">Home</a></li>
+  				<li><a href="/articles">Create a NEW ARTICLE</a></li>
+  			</ul>
+  		</nav>
+  	</header><!-- /header -->
+  	<main>
+  		<h2>List of Articles</h2>
+  		<ul>
+  			<% for(let i=0;i< articles.length; i++){%>
+  			<li><a href="/articles/<%=articles[i].id%>"><%=articles[i].title %></a>
+
+  			<%}%>
+  		</li>
+  	</ul>
+  </main>
+
+
+
+  </body>
+</html>
